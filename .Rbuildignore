@@ -1,0 +1,15 @@
+^renv$
+^renv\.lock$
+^README\.Rmd$
+^CODE_OF_CONDUCT\.md$
+^.*\.Rproj$
+^\.Rproj\.user$
+^data-raw$
+^00-setup\.R$
+^01-dev_cycle\.R$
+^\.lintr$
+^_targets.R$
+^_targets$
+^_targets_packages.R$
+^reports$
+^02-run_tar.R$
