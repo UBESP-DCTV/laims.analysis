@@ -10,7 +10,6 @@ dev_pkgs <- c(
   "visNetwork", "webshot", "withr", "xaringan"
 )
 gh_dev_pkgs <- c(
-  "ropensci/targets",
   "ropensci/tarchetypes",
   "gadenbuie/xaringanthemer",
   "gadenbuie/metathis",
@@ -70,8 +69,9 @@ usethis::use_test("functions")
 
 # Pipeline --------------------------------------------------------
 
+targets::tar_script()
 targets::tar_renv(extras = character(0))
-tar_config_set(project = here())
+
 
 
 # Isolation -------------------------------------------------------

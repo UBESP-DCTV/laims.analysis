@@ -1,6 +1,8 @@
-run_tar <- function() {
-  proceed <- TRUE
 
+# Select all and... run it! ---------------------------------------
+
+
+run <- function(proceed = TRUE) {
   if (interactive()) {
     targets::tar_visnetwork(targets_only = TRUE) |>
       print()
@@ -18,4 +20,4 @@ run_tar <- function() {
   }
 }
 
-run_tar()
+run()
