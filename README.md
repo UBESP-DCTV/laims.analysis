@@ -9,7 +9,7 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![Codecov test
 coverage](https://codecov.io/gh/UBESP-DCTV/laims.analysis/branch/master/graph/badge.svg)](https://app.codecov.io/gh/UBESP-DCTV/laims.analysis?branch=master)
-[![check-release](https://github.com/UBESP-DCTV/laims.analysis/workflows/check-release/badge.svg)](https://github.com/UBESP-DCTV/laims.analysis/actions)
+[![R-CMD-check](https://github.com/UBESP-DCTV/laims.analysis/actions/workflows/check-release.yaml/badge.svg)](https://github.com/UBESP-DCTV/laims.analysis/actions/workflows/check-release.yaml)
 [![lint](https://github.com/UBESP-DCTV/laims.analysis/workflows/lint/badge.svg)](https://github.com/UBESP-DCTV/laims.analysis/actions)
 <!-- badges: end -->
 
