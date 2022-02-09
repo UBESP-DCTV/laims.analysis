@@ -1,15 +1,17 @@
 stop("00-setup.R is not intended to be re-run/sourced.", call. = FALSE)
 
+
 # Development packages ---------------------------------------------
 
 dev_pkgs <- c(
-  "blogdown", "checkmate", "devtools", "depigner", "distill", "fs",
-  "gitcreds", "here", "htmltools", "igraph", "janitor", "knitr",
+  "blogdown", "checkmate", "covr", "devtools", "depigner", "distill",
+  "fs", "gitcreds", "here", "htmltools", "igraph", "janitor", "knitr",
   "lintr", "magick", "markdown", "mice", "miniUI", "naniar", "purrr",
-  "rms", "shiny", "spelling","stringr", "testthat", "unheadr",
-  "usethis", "visNetwork", "webshot", "withr", "xaringan"
+  "rms", "shiny", "spelling","stringr", "testthat",
+  "unheadr", "usethis", "visNetwork", "webshot", "withr", "xaringan"
 )
 gh_dev_pkgs <- c(
+  "ropensci/targets",
   "ropensci/tarchetypes",
   "gadenbuie/xaringanthemer",
   "gadenbuie/metathis",
@@ -46,6 +48,7 @@ usethis::use_code_of_conduct("corrado.lanera@ubep.unipd.it")
 usethis::use_lifecycle_badge("experimental")
 usethis::use_logo("man/img/LAIMS.png")
 
+
 # Checks ----------------------------------------------------------
 
 usethis::use_spell_check()
@@ -53,6 +56,7 @@ usethis::use_testthat()
 # add # library(checkmate)
 fs::file_create(here::here("tests/testthat/setup.R"))
 usethis::use_test("setup")
+usethis::use_coverage()
 
 # Data infrastructure ---------------------------------------------
 
@@ -73,7 +77,6 @@ targets::tar_script()
 targets::tar_renv(extras = character(0))
 
 
-
 # Isolation -------------------------------------------------------
 
 usethis::git_vaccinate()
@@ -82,3 +85,15 @@ renv::upgrade()
 renv::update()
 renv::status()
 renv::snapshot()
+
+
+
+# CI/CD -----------------------------------------------------------
+
+usethis::use_github_action("check-release")
+usethis::use_github_actions_badge("check-release")
+usethis::use_github_action("test-coverage")
+usethis::use_github_actions_badge("test-coverage")
+usethis::use_github_action("lint")
+usethis::use_github_actions_badge("lint")
+usethis::use_tidy_github()

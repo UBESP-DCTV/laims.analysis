@@ -13,3 +13,8 @@
 ^_targets_packages.R$
 ^reports$
 ^02-run_tar.R$
+^codecov\.yml$
+^\.github$
+^01-FIRST_RUN.R$
+^dev$
+^run.R$

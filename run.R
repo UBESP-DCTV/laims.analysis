@@ -1,12 +1,12 @@
 # To view your current pipeline status, and possibly run/update it,
 # you can simply source/execute this script
 {
-  function(proceed = TRUE, save_all = TRUE, targets_only = FALSE) {
+  function(proceed = TRUE, save_all = TRUE, targets_only = TRUE) {
     if (interactive()) {
       if (requireNamespace("rstudioapi") && save_all) {
         rstudioapi::documentSaveAll()
       }
-      targets::tar_visnetwork(targets_only = target_only) |>
+      targets::tar_visnetwork(targets_only = targets_only) |>
         print()
 
       proceed <- usethis::ui_yeah(

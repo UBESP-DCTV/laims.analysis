@@ -152,6 +152,23 @@
       "Hash": "50c838a310445e954bc13f26f26a6ecf",
       "Requirements": []
     },
+    "autotestthat": {
+      "Package": "autotestthat",
+      "Version": "0.1.1",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "CorradoLanera",
+      "RemoteRepo": "autotestthat",
+      "RemoteRef": "master",
+      "RemoteSha": "c54fe3096f76d455698eff4ea3e8cb730d55c6b9",
+      "Hash": "f1b8478f830c3b4bbb25cd4609d1630d",
+      "Requirements": [
+        "crayon",
+        "rstudioapi",
+        "testthat"
+      ]
+    },
     "backports": {
       "Package": "backports",
       "Version": "1.4.1",
@@ -425,6 +442,22 @@
       "Hash": "0f22be39ec1d141fd03683c06f3a6e67",
       "Requirements": []
     },
+    "covr": {
+      "Package": "covr",
+      "Version": "3.5.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "6d80a9fc3c0c8473153b54fa54719dfd",
+      "Requirements": [
+        "crayon",
+        "digest",
+        "httr",
+        "jsonlite",
+        "rex",
+        "withr",
+        "yaml"
+      ]
+    },
     "cpp11": {
       "Package": "cpp11",
       "Version": "0.4.2",
@@ -686,6 +719,28 @@
       "Hash": "bb0eec2fe32e88d9e2836c2f73ea2077",
       "Requirements": [
         "rlang"
+      ]
+    },
+    "emo": {
+      "Package": "emo",
+      "Version": "0.0.0.9000",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "hadley",
+      "RemoteRepo": "emo",
+      "RemoteRef": "master",
+      "RemoteSha": "3f03b11491ce3d6fc5601e210927eff73bf8e350",
+      "Hash": "5ece31a6c0f94811e6bef59482d87164",
+      "Requirements": [
+        "assertthat",
+        "crayon",
+        "glue",
+        "lubridate",
+        "magrittr",
+        "purrr",
+        "rlang",
+        "stringr"
       ]
     },
     "evaluate": {
@@ -1303,6 +1358,18 @@
         "generics"
       ]
     },
+    "magick": {
+      "Package": "magick",
+      "Version": "2.7.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "56fbad418aa50939ed8c3028126af8d7",
+      "Requirements": [
+        "Rcpp",
+        "curl",
+        "magrittr"
+      ]
+    },
     "magrittr": {
       "Package": "magrittr",
       "Version": "2.0.2",
@@ -1331,6 +1398,24 @@
       "Requirements": [
         "cachem",
         "rlang"
+      ]
+    },
+    "metathis": {
+      "Package": "metathis",
+      "Version": "1.1.1",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "gadenbuie",
+      "RemoteRepo": "metathis",
+      "RemoteRef": "main",
+      "RemoteSha": "2ce85ec9b81995c8da41119c23bfe27fbe4fd35c",
+      "Hash": "20f6103b647566bbe1bf8173f7faa882",
+      "Requirements": [
+        "htmltools",
+        "knitr",
+        "magrittr",
+        "purrr"
       ]
     },
     "mgcv": {
@@ -2574,6 +2659,42 @@
         "rmarkdown",
         "servr",
         "xfun"
+      ]
+    },
+    "xaringanExtra": {
+      "Package": "xaringanExtra",
+      "Version": "0.5.5",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "gadenbuie",
+      "RemoteRepo": "xaringanExtra",
+      "RemoteRef": "main",
+      "RemoteSha": "ee5092d2d27bf4b813ea50ec4c264b331283face",
+      "Hash": "e49fa3c30506df0fde14a5ecabfdb0a5",
+      "Requirements": [
+        "htmltools",
+        "jsonlite",
+        "knitr",
+        "uuid"
+      ]
+    },
+    "xaringanthemer": {
+      "Package": "xaringanthemer",
+      "Version": "0.4.1",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "gadenbuie",
+      "RemoteRepo": "xaringanthemer",
+      "RemoteRef": "main",
+      "RemoteSha": "10d67c898f40175f944054a34236b69753c0f7f9",
+      "Hash": "4805fe75f99bd02a35afb95af3ea744c",
+      "Requirements": [
+        "colorspace",
+        "glue",
+        "purrr",
+        "whisker"
       ]
     },
     "xfun": {

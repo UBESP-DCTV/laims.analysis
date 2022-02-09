@@ -1,7 +1,7 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|iteration|parent|children|seconds|warnings|error
-result|stem|60c85de45e4d9920|bf9eafee5774b5fd|e287d126469efc5f|1204638111||t18971.6959611459s|3bd8f66805fd112b|45|rds|vector|||0||
-report|stem|1f78ac2afeca018b|2b588d801ce36ea4|1a2a7149c68e92a1|-237041703|reports/report.html*reports/report.Rmd|t18971.6960654788s|78e49e2a97878bb1|1704583|file|vector|||9.18||
 "%||%"|function|93db8205e548ee96||||||||||||||
 extract_fct_names|function|21e7b84f05cf92b8||||||||||||||
-view_in_excel|function|81b6eab6e945fca7||||||||||||||
 null|function|fd2cdd265ae84869||||||||||||||
+report|stem|d320b401924531aa|8d1ba662a58ab8e4|1a2a7149c68e92a1|-237041703|reports/report.html*reports/report.Rmd|t19032.8408545391s|55fee40c9e29e953|1346095|file|vector|||11.62||
+result|stem|60c85de45e4d9920|bf9eafee5774b5fd|e287d126469efc5f|1204638111||t18971.6959722222s|3bd8f66805fd112b|45|rds|vector|||0||
+view_in_excel|function|81b6eab6e945fca7||||||||||||||

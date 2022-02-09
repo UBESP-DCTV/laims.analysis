@@ -1,5 +1,5 @@
 
-# Here below put your main project's funcitons ---------------------
+# Here below put your main project's functions ---------------------
 
 
 #' Null function

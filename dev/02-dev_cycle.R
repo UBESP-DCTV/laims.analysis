@@ -1,7 +1,7 @@
 
 # Project packages (TO BE UPDATED EVERY NEW PACKAGE USED) ----------
 
-prj_pkgs <- c("fs", "readr")
+prj_pkgs <- c("fs", "readr", "stringr", "purrr")
 gh_prj_pkgs <- c()
 meta_pkgs <- c("tidymodels", "tidyverse")
 

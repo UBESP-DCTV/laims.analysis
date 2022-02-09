@@ -8,13 +8,18 @@ Description: What the package does (one paragraph).
 License: file LICENSE
 Imports: 
     fs,
-    readr
+    purrr,
+    readr,
+    stringr
 Suggests: 
+    autotestthat (>= 0.1.1),
     blogdown,
     checkmate,
+    covr,
     depigner,
     devtools,
     distill,
+    emo (>= 0.0.0.9000),
     gitcreds,
     here,
     htmltools,
@@ -22,22 +27,34 @@ Suggests:
     janitor,
     knitr,
     lintr,
+    magick,
     markdown,
+    metathis (>= 1.1.1),
     mice,
     miniUI,
     naniar,
-    purrr,
     rms,
     shiny,
     spelling,
-    stringr,
+    tarchetypes (>= 0.4.1),
+    targets (>= 0.10.0.9000),
     testthat (>= 3.0.0),
     unheadr,
     usethis,
     visNetwork,
     webshot,
     withr,
-    xaringan
+    xaringan,
+    xaringanExtra (>= 0.5.5),
+    xaringanthemer (>= 0.4.1)
+Remotes: 
+    CorradoLanera/autotestthat,
+    gadenbuie/metathis,
+    gadenbuie/xaringanExtra,
+    gadenbuie/xaringanthemer,
+    hadley/emo,
+    ropensci/tarchetypes,
+    ropensci/targets
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
