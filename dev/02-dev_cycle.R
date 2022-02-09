@@ -19,13 +19,11 @@ renv::status()
 # renv::snapshot()
 
 
+# Functions definitions -------------------------------------------
 
-# Development cycle ------------------------------------------------
+## if you need more structure respect to include your functions inside
+## `R/functions.R`, you can create other couple of test/function-script
+## by running the following lines of code as needed.
 
-spelling::spell_check_package()
-## spelling::update_wordlist()
-lintr::lint_package()
-
-## CTRL + SHIFT + D: update project documentation
-## CTRL + SHIFT + T: run all project's tests
-## CTRL + SHIFT + E: run all CRAN tests
+# usethis::use_test("<my_fun>")
+# usethis::use_r(<"my_fun">)

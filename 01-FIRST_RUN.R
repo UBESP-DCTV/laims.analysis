@@ -1,10 +1,9 @@
 
 # FIRST RUN ONLY ---------------------------------------------------
 
-## - [ ] Change the name of `laims.analyses.Rproj` with your main
-##       project's directory name accordingly
-#
-# Simply run the following code
+## - [ ] Change the name of `laims.analyses.Rproj` using your main
+##       project's directory name accordingly. To do that,
+##       simply run the following code
 fs::file_move(
   here::here("laims.analysis.Rproj"),  # old project's name
   paste0(basename(here::here()), ".Rproj")  # current project's name
@@ -34,10 +33,11 @@ renv::snapshot()
 
 ## At your convenience, replace your readme file
 usethis::use_readme_rmd()
-usethis::use_code_of_conduct()  # put your email here
+usethis::use_code_of_conduct()  # put your email here, i.e.
+                                # usethis::use_code_of_conduct("me@org.com")
 usethis::use_lifecycle_badge("experimental")
 
 
 ## So you can put this very file in the `dev/` folder, where you can
 ## find another useful file 02-dev_cycle.R
-fs::file_move("01-FIRST_RUN.R", "dev/01-FIRST_RUN.R")
+fs::file_move("01-FIRST_RUN.R", "dev/01-first_run.R")

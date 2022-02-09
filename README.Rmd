@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# laims.analisi
+# laims.analisi <img src='man/figures/logo.png' align="right" height="120" />
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
@@ -25,7 +25,7 @@ This project would represent the template for the analyses conducted  within the
 
 The aim is to provide a ready-to-use robust, reproducible infrastructure for complex to quick analyses.
 
-When you create a new project based on this template, name it accordingly with your project's name. Next, you can open the `dev/01-dev_cycle.R` script, and  execute the code and instructions within the first chunk **FIRST RUN ONLY**. There, you will have the opportunity to set the very first and basic pieces of information for your project, and activate all its functionalities.
+When you create a new project based on this template, name it accordingly with your project's name. Next, you can open the `dev/01-dev_cycle.R` script, and  execute the code and instructions within the first chunk labelled as **FIRST RUN ONLY**. There, you will have the opportunity to set the very first and basic pieces of information for your project, and activate all its functionalities.
 
 
 

@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# laims.analisi
+# laims.analisi <img src='man/figures/logo.png' align="right" height="120" />
 
 <!-- badges: start -->
 
@@ -22,9 +22,9 @@ for complex to quick analyses.
 When you create a new project based on this template, name it
 accordingly with your project’s name. Next, you can open the
 `dev/01-dev_cycle.R` script, and execute the code and instructions
-within the first chunk **FIRST RUN ONLY**. There, you will have the
-opportunity to set the very first and basic pieces of information for
-your project, and activate all its functionalities.
+within the first chunk labelled as **FIRST RUN ONLY**. There, you will
+have the opportunity to set the very first and basic pieces of
+information for your project, and activate all its functionalities.
 
 ## Functionalities
 

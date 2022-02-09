@@ -4,7 +4,7 @@
 
 # setup -----------------------------------------------------------
 
-library(targets)  # use tar_read(target_name) to load a target anywhere
+library(targets)
 library(here)
 
 # load all your custom functions
@@ -13,5 +13,6 @@ list.files(here("R"), pattern = "\\.R$", full.names = TRUE) |>
 
 
 # Code here below -------------------------------------------------
-
+# use `tar_read(target_name)` to load a target anywhere (note that
+# `target_name` is NOT quoted!)
 

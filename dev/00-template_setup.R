@@ -5,9 +5,9 @@ stop("00-setup.R is not intended to be re-run/sourced.", call. = FALSE)
 dev_pkgs <- c(
   "blogdown", "checkmate", "devtools", "depigner", "distill", "fs",
   "gitcreds", "here", "htmltools", "igraph", "janitor", "knitr",
-  "lintr", "markdown", "mice", "miniUI", "naniar", "purrr", "rms",
-  "shiny", "spelling","stringr", "testthat", "unheadr", "usethis",
-  "visNetwork", "webshot", "withr", "xaringan"
+  "lintr", "magick", "markdown", "mice", "miniUI", "naniar", "purrr",
+  "rms", "shiny", "spelling","stringr", "testthat", "unheadr",
+  "usethis", "visNetwork", "webshot", "withr", "xaringan"
 )
 gh_dev_pkgs <- c(
   "ropensci/tarchetypes",
@@ -44,7 +44,7 @@ usethis::use_roxygen_md()
 usethis::use_readme_rmd()
 usethis::use_code_of_conduct("corrado.lanera@ubep.unipd.it")
 usethis::use_lifecycle_badge("experimental")
-
+usethis::use_logo("man/img/LAIMS.png")
 
 # Checks ----------------------------------------------------------
 
