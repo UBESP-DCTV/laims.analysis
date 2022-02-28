@@ -34,8 +34,8 @@ the `_targets.R` file, which define the concept DAG of your project
 tracking all it’s dependencies.
 
 In the `dev/` folder, you will find also the `02-dev_cycle.R` and the
-`03-check_cycle.R` helping you across the development and validation of
-the project.
+`03-run_cycle.R` helping you across the development and execution/update
+of the project.
 
 ## Functionalities
 
