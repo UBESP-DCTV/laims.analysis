@@ -16,12 +16,17 @@ list.files(here("R"), pattern = "\\.R$", full.names = TRUE) |>
 
 # Set target-specific options such as packages.
 tar_option_set(
-  packages = c("here"),
+  packages = c("readr"),
   error = "continue"
 )
 
 # End this file with a list of target objects.
 list(
+  tar_target(db_raw_path, here::here("data-raw/<db_raw.csv>")),
+  tar_target(db_raw, readr::read_csv2(db_raw_path)),
+  tar_target(db, preprocess(db_raw)),
+
+
   # Call your custom functions as needed.
   tar_target(result, null(1)),
 
