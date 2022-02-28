@@ -1,6 +1,6 @@
-# Getting help with laims.analisi
+# Getting help with laims.analysis
 
-Thanks for using laims.analisi!
+Thanks for using laims.analysis!
 Before filing an issue, there are a few places to explore and pieces to put together to make the process as smooth as possible.
 
 ## Make a reprex

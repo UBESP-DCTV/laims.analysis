@@ -1,4 +1,4 @@
 library(testthat)
-library(laims.analisi)
+library(laims.analysis)
 
-test_check("laims.analisi")
+test_check("laims.analysis")
