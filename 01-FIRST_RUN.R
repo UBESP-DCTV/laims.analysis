@@ -36,7 +36,7 @@ usethis::use_package_doc(open = FALSE)
 ##       following code.
 usethis::edit_r_environ("project")
 
-## Finaly, update all your packages in the project's library.
+## [Optional] Finaly, update all your packages in the project's library.
 renv::upgrade()
 renv::update()
 renv::status()
@@ -45,11 +45,14 @@ renv::snapshot()
 
 ## At your convenience, replace your readme file
 usethis::use_readme_rmd()
-usethis::use_code_of_conduct()  # put your email here, i.e.
-                                # usethis::use_code_of_conduct("me@org.com")
+
+# put your email here, i.e. usethis::use_code_of_conduct("me@org.com")
+usethis::use_code_of_conduct()
 usethis::use_lifecycle_badge("experimental")
+rmarkdown::render(here::here("README.Rmd"))
 
 
 ## So you can put this very file in the `dev/` folder, where you can
 ## find another useful file 02-dev_cycle.R
 fs::file_move("01-FIRST_RUN.R", "dev/01-first_run.R")
+rstudioapi::navigateToFile(here::here("dev/02-dev_cycle.R"))

@@ -1,7 +1,7 @@
 _R_CHECK_LENGTH_1_CONDITION_="true"
 PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
 
-# project's information
+# Project's information: ONE SINGLE LINE EACH (no line brakes!!)
 PROJ_TITLE="Project's Title"
 PROJ_DESCRIPTION="Project's description."
 PROJ_URL="https://github.com/UBESP-DCTV/laims.analysis"
