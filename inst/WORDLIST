@@ -1,4 +1,5 @@
 Biostatistics
+CMD
 Codecov
 DSCTVPH
 LAIMS
@@ -9,7 +10,6 @@ UBEP
 UniPD
 Zotero
 addin
-analisi
 laims
 linters
 packages’
