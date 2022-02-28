@@ -10,6 +10,17 @@ fs::file_move(
   paste0(proj_name, ".Rproj")  # current project's name
 )
 
+
+list.files(here::here(), pattern = "\\.([rR]|([rR]?md))$") |>
+  setdiff("01-FIRST_RUN.R") |>
+  c("DESCRIPTION") |>
+  purrr::walk(~{
+    readLines(.x) |>
+      stringr::str_replace_all("laims\\.analysis", prj_name) |>
+      writeLines(.x)
+  })
+
+
 ## - [ ] Fill the DESCRIPTION file
 ##   > do change `Package:` definition in the first line with your
 ##     current project's name (i.e. your main folder's name)
