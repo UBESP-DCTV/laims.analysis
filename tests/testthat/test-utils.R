@@ -1,18 +1,3 @@
-test_that("%||% works", {
-  # setup
-  x <- NULL
-  y <- 1
-
-  # execution
-  res_null <- x %||% 7
-  res_full <- y %||% 7
-
-  # expectation
-  expect_equal(res_null, 7)
-  expect_equal(res_full, 1)
-})
-
-
 test_that("extract_fct_names works", {
   # setup
   funs <- "
