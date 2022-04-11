@@ -5,3 +5,8 @@ PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
 PROJ_TITLE="Project's Title"
 PROJ_DESCRIPTION="Project's description."
 PROJ_URL="https://github.com/UBESP-DCTV/laims.analysis"
+
+# Shared folders local locations
+PRJ_SHARED_PATH="",
+INPUT_DATA_FOLDER="",
+OUTPUT_DATA_FOLDER=""

@@ -22,18 +22,38 @@ tar_option_set(
 
 # End this file with a list of target objects.
 list(
+
+  # Import your file from custo (shared) location, and preprocess them
   tar_target(
     db_raw_path,
-    here::here("data-raw/<db_raw.csv>"),
+    file.path(get_input_data_path(), "db_raw.csv"),
     format = "file"
   ),
-  tar_target(db_raw, readr::read_csv2(db_raw_path)),
-  tar_target(db, preprocess(db_raw)),
+
+  # Use {qs} in {targets} to save space and time in save/load objects
+  tar_target(db_raw, import_data(db_raw_path), format = "qs"),
+  tar_target(db, preprocess(db_raw), format = "qs"),
 
 
   # Call your custom functions as needed.
-  tar_target(result, null(1)),
+  tar_target(irrelevantResult, null(1), format = "qs"),
+  tar_target(relevantResults, relevant_computation(db), format = "qs"),
 
-  # compile the report
-  tar_render(report, here("reports/report.Rmd"))
+  # compile yor report
+  tar_render(report, here("reports/report.Rmd")),
+
+
+  # Decide what to share with other, and do it in a standard RDS format
+  tar_target(
+    objectToShare,
+    list(
+      relevant_result = relevantResults
+    )
+  ),
+  tar_target(
+    shareOutput,
+    share_objects(objectToShare),
+    format = "file",
+    pattern = map(objectToShare)
+  )
 )
