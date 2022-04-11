@@ -22,7 +22,11 @@ tar_option_set(
 
 # End this file with a list of target objects.
 list(
-  tar_target(db_raw_path, here::here("data-raw/<db_raw.csv>")),
+  tar_target(
+    db_raw_path,
+    here::here("data-raw/<db_raw.csv>"),
+    format = "file"
+  ),
   tar_target(db_raw, readr::read_csv2(db_raw_path)),
   tar_target(db, preprocess(db_raw)),
 
