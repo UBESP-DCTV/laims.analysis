@@ -11,5 +11,6 @@ if (interactive()) {
     library(usethis)
     library(checkmate)
     library(testthat)
+    library(targets)
   }))
 }
