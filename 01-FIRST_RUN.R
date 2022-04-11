@@ -11,14 +11,20 @@ fs::file_move(
 )
 
 
-list.files(here::here(), pattern = "\\.([rR]|([rR]?md))$") |>
-  setdiff("01-FIRST_RUN.R") |>
+here::here() |>
+  list.files(
+    pattern = "\\.([rR]|([rR]?md))$",
+    recursive = TRUE,
+    all.files = TRUE
+  ) |>
+  setdiff(c("01-FIRST_RUN.R", ".Rprofile")) |>
   c("DESCRIPTION") |>
   purrr::walk(~{
     readLines(.x) |>
       stringr::str_replace_all("laims\\.analysis", prj_name) |>
       writeLines(.x)
   })
+
 
 
 ## - [ ] Fill the DESCRIPTION file
