@@ -12,11 +12,6 @@ view_in_excel <- function(.data) {
 }
 
 
-`%||%` <- function(x, y) {
-  if (is.null(x)) y else x
-}
-
-
 extract_fct_names <- function(path) {
   readr::read_lines(path) |>
     stringr::str_extract_all("^.*(?=`? ?<- ?function)") |>
