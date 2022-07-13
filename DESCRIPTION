@@ -33,6 +33,7 @@ Suggests:
     mice,
     miniUI,
     naniar,
+    qs,
     rms,
     shiny,
     spelling,

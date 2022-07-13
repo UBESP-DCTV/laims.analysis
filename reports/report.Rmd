@@ -98,7 +98,7 @@ targets::tar_visnetwork(
 You can get the results of your analyses by 
 
 ```{r}
-tar_read(result)
+str(tar_read(db), 1)
 ```
 
 

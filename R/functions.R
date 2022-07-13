@@ -23,8 +23,8 @@ null <- function(x = NULL) {
 }
 
 
-import_data <- function(.dir_path) {
-  file.path(.dir_path, "db.csv") |>
+import_data <- function(.data_path) {
+  file.path(.data_path) |>
     normalizePath() |>
     readr::read_csv()
 }
