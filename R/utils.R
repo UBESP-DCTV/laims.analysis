@@ -42,7 +42,7 @@ share_objects <- function(obj_list) {
 
   obj_paths <- file.path(get_output_data_path, file_name) |>
     normalizePath(mustWork = FALSE) |>
-    set_names(names(obj_list))
+    purrr::set_names(names(obj_list))
 
   # Those must be RDS
   purrr::walk2(obj_list, obj_paths, readr::write_rds)
