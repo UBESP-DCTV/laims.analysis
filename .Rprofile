@@ -5,19 +5,6 @@ options(
   tidyverse.quiet = TRUE
 )
 
-usethis::ui_info("
-  Welcome to the LAIMS'project template!
-
-  To set your environmental (private) variables,
-    you can run {usethis::ui_code('usethis::edit_r_environ(\"project\")')}.
-
-  Please, report any issue, comment, or suggestion to
-    https://github.com/UBESP-DCTV/laims.analysis/issues.
-
-  Thank you for using {usethis::ui_value('laims.template')}!
-")
-
-
 stopifnot(
   `env var "PROJ_TITLE" must be set` = Sys.getenv("PROJ_TITLE") != "",
   `env var "PROJ_DESCRIPTION" must be set` =
@@ -67,10 +54,6 @@ if (!(fs::is_dir(Sys.getenv("PRJ_SHARED_PATH")))) {
   ")
 }
 
-usethis::ui_done("
-{usethis::ui_field('PRJ_SHARED_PATH')} set to
-{usethis::ui_value(Sys.getenv('PRJ_SHARED_PATH'))}.
-")
 
 .get_prj_shared_path <- function() Sys.getenv('PRJ_SHARED_PATH')
 
