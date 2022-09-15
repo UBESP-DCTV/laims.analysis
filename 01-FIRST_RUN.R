@@ -60,5 +60,7 @@ rmarkdown::render(here::here("README.Rmd"))
 
 ## So you can put this very file in the `dev/` folder, where you can
 ## find another useful file 02-dev_cycle.R
-fs::file_move("01-FIRST_RUN.R", "dev/01-first_run.R")
-rstudioapi::navigateToFile(here::here("dev/02-dev_cycle.R"))
+{
+  fs::file_move("01-FIRST_RUN.R", "dev/01-first_run.R")
+  rstudioapi::navigateToFile(here::here("dev/02-dev_cycle.R"))
+}
