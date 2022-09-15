@@ -7,7 +7,7 @@ dev_pkgs <- c(
   "blogdown", "checkmate", "covr", "devtools", "depigner", "distill",
   "fs", "gitcreds", "here", "htmltools", "igraph", "janitor", "knitr",
   "lintr", "magick", "markdown", "metathis", "mice", "miniUI", "naniar",
-  "purrr", "rms", "shiny", "spelling","stringr", "targets",
+  "purrr", "qs", "rms", "shiny", "spelling","stringr", "targets",
   "tarchetypes", "testthat", "unheadr", "usethis", "visNetwork",
   "webshot", "withr", "xaringan", "xaringanExtra", "xaringanthemer"
 )
