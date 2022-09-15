@@ -55,8 +55,7 @@ usethis::use_readme_rmd()
 # put your email here, i.e. usethis::use_code_of_conduct("me@org.com")
 usethis::use_code_of_conduct()
 usethis::use_lifecycle_badge("experimental")
-rmarkdown::render(here::here("README.Rmd"))
-
+devtools::build_readme()
 
 ## So you can put this very file in the `dev/` folder, where you can
 ## find another useful file 02-dev_cycle.R
