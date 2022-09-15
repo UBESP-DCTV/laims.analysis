@@ -78,12 +78,10 @@ devtools::build_readme()
     "to maintain the project updated during its development."
   ))
 
-  rstudioapi::navigateToFile(
-    here::here("tests/testthat/test-utils.R")
-  )
-  rstudioapi::navigateToFile(here::here("R/utils.R"))
+  rstudioapi::navigateToFile(here::here("dev/03-run_cycle.R"))
+  rstudioapi::navigateToFile(here::here("_targets.R"))
   usethis::ui_todo(
-    "Use {usethis::ui_value('utils.R')} for your wrappers."
+    "Use {usethis::ui_value('_targets.R')} to devine your pipelines."
   )
 
   rstudioapi::navigateToFile(
@@ -94,9 +92,12 @@ devtools::build_readme()
     "Use {usethis::ui_value('functions.R')} for your main functions."
   )
 
-  rstudioapi::navigateToFile(here::here("_targets.R"))
+  rstudioapi::navigateToFile(
+    here::here("tests/testthat/test-utils.R")
+  )
+  rstudioapi::navigateToFile(here::here("R/utils.R"))
   usethis::ui_todo(
-    "Use {usethis::ui_value('_targets.R')} to devine your pipelines."
+    "Use {usethis::ui_value('utils.R')} for your wrappers."
   )
 
   rstudioapi::navigateToFile(here::here("dev/03-run_cycle.R"))
