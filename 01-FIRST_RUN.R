@@ -50,16 +50,26 @@ renv::snapshot()
 
 
 ## At your convenience, replace your readme file
-usethis::use_readme_rmd()
+{
+  usethis::use_readme_rmd()
+  usethis::use_lifecycle_badge("experimental")
+  usethis::use_github_actions_badge("check-release")
+  usethis::use_github_actions_badge("test-coverage")
+  usethis::use_github_actions_badge("lint")
+}
 
 # put your email here, i.e. usethis::use_code_of_conduct("me@org.com")
 usethis::use_code_of_conduct()
-usethis::use_lifecycle_badge("experimental")
 devtools::build_readme()
 
 ## So you can put this very file in the `dev/` folder, where you can
 ## find another useful file 02-dev_cycle.R
 {
   fs::file_move("01-FIRST_RUN.R", "dev/01-first_run.R")
+  rstudioapi::documentClose()
+  usethis::ui_done(paste0(
+    "{usethis::ui_value('01-FIRST_RUN.R')} moved to",
+    "{usethis::ui_value('dev/01-first_run.R')}, and closed."
+  ))
   rstudioapi::navigateToFile(here::here("dev/02-dev_cycle.R"))
 }
