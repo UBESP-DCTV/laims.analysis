@@ -25,7 +25,7 @@ list(
   # Import your file from custom (shared) location, and preprocess them
   tar_target(
     db_raw_path,
-    file.path(get_input_data_path(), "db_raw.csv"),
+    file.path(get_input_data_path("db_raw.csv")),
     format = "file"
   ),
 
