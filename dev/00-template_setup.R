@@ -6,16 +6,12 @@ stop("00-setup.R is not intended to be re-run/sourced.", call. = FALSE)
 dev_pkgs <- c(
   "blogdown", "checkmate", "covr", "devtools", "depigner", "distill",
   "fs", "gitcreds", "here", "htmltools", "igraph", "janitor", "knitr",
-  "lintr", "magick", "markdown", "mice", "miniUI", "naniar", "purrr",
-  "rms", "shiny", "spelling","stringr", "testthat",
-  "unheadr", "usethis", "visNetwork", "webshot", "withr", "xaringan"
+  "lintr", "magick", "markdown", "metathis", "mice", "miniUI", "naniar",
+  "purrr", "rms", "shiny", "spelling","stringr", "targets",
+  "tarchetypes", "testthat", "unheadr", "usethis", "visNetwork",
+  "webshot", "withr", "xaringan", "xaringanExtra", "xaringanthemer"
 )
 gh_dev_pkgs <- c(
-  "ropensci/targets",
-  "ropensci/tarchetypes",
-  "gadenbuie/xaringanthemer",
-  "gadenbuie/metathis",
-  "gadenbuie/xaringanExtra",
   "hadley/emo",
   "CorradoLanera/autotestthat"
 )
