@@ -7,5 +7,5 @@ PROJ_URL="https://github.com/UBESP-DCTV/laims.analysis"
 
 # Shared folders local locations
 PRJ_SHARED_PATH=""
-INPUT_DATA_FOLDER=""
-OUTPUT_DATA_FOLDER=""
+INPUT_DATA_FOLDER="data-raw"
+OUTPUT_DATA_FOLDER="output"
