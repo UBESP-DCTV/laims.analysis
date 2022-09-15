@@ -18,7 +18,6 @@ devtools::document()
 renv::status()
 # renv::snapshot()
 
-
 # Functions definitions -------------------------------------------
 
 ## if you need more structure respect to include your functions inside

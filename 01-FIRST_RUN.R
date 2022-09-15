@@ -71,5 +71,37 @@ devtools::build_readme()
     "{usethis::ui_value('01-FIRST_RUN.R')} moved to",
     "{usethis::ui_value('dev/01-first_run.R')}, and closed."
   ))
+
   rstudioapi::navigateToFile(here::here("dev/02-dev_cycle.R"))
+  usethis::ui_todo(paste0(
+    "Use {usethis::ui_value('02-dev_cycle.R')} ",
+    "to maintain the project updated during its development."
+  ))
+
+  rstudioapi::navigateToFile(
+    here::here("tests/testthat/test-utils.R")
+  )
+  rstudioapi::navigateToFile(here::here("R/utils.R"))
+  usethis::ui_todo(
+    "Use {usethis::ui_value('utils.R')} for your wrappers."
+  )
+
+  rstudioapi::navigateToFile(
+    here::here("tests/testthat/test-functions.R")
+  )
+  rstudioapi::navigateToFile(here::here("R/functions.R"))
+  usethis::ui_todo(
+    "Use {usethis::ui_value('functions.R')} for your main functions."
+  )
+
+  rstudioapi::navigateToFile(here::here("_targets.R"))
+  usethis::ui_todo(
+    "Use {usethis::ui_value('_targets.R')} to devine your pipelines."
+  )
+
+  rstudioapi::navigateToFile(here::here("dev/03-run_cycle.R"))
+  usethis::ui_todo(paste0(
+    "Use {usethis::ui_value('03-run_cycle.R')} ",
+    "to check and execute the pipeline at each iteration."
+  ))
 }
