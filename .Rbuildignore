@@ -10,6 +10,7 @@
 ^\.lintr$
 ^_targets.R$
 ^_targets$
+^_targets.yaml$
 ^_targets_packages.R$
 ^reports$
 ^02-run_tar.R$
