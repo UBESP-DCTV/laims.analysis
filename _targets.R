@@ -36,7 +36,7 @@ list(
 
   # Call your custom functions as needed.
   tar_target(irrelevantResult, null(1), format = "qs"),
-  tar_target(relevantResults, relevant_computation(db), format = "qs"),
+  tar_target(relevantResult, relevant_computation(db), format = "qs"),
 
   # compile yor report
   tar_render(report, here::here("reports/report.Rmd")),
@@ -46,7 +46,7 @@ list(
   tar_target(
     objectToShare,
     list(
-      relevant_result = relevantResults
+      relevant_result = relevantResult
     )
   ),
   tar_target(

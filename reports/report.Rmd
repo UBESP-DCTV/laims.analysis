@@ -104,6 +104,15 @@ str(tar_read(db), 1)
 
 ## Discussion
 
+You can also load and reuse objects
+
+```{r}
+tar_load(irrelevantResult)
+tar_load(relevantResult)
+```
+
+
+Relevant results are: `r relevanResult`.
 
 
 
