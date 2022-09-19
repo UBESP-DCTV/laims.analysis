@@ -20,6 +20,7 @@ citation_url: "`r Sys.getenv('PROJ_URL')`"
 date: "`r Sys.Date()`"
 bibliography: biblio.bib
 preview: man/img/LAIMS.png
+self-contained: true
 output:
   distill::distill_article:
     toc: true
@@ -85,7 +86,7 @@ You can show your current state analyses' pipeline, e.g., by
 targets::tar_visnetwork(
   # targets_only = TRUE,
   exclude = c(
-    "report",
+    "report", "objectToShare", "shareOutput", starts_with("."),
     all_of(extract_fct_names(here::here("R/utils.R")))
   )
 )
@@ -98,12 +99,21 @@ targets::tar_visnetwork(
 You can get the results of your analyses by 
 
 ```{r}
-tar_read(result)
+str(tar_read(db), 1)
 ```
 
 
 ## Discussion
 
+You can also load and reuse objects
+
+```{r}
+tar_load(irrelevantResult)
+tar_load(relevantResult)
+```
+
+
+Relevant results are: `r relevanResult`.
 
 
 

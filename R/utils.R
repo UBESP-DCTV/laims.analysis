@@ -22,25 +22,29 @@ extract_fct_names <- function(path) {
 
 
 
-get_input_data_path <- function() {
+get_input_data_path <- function(x) {
   file.path(
     Sys.getenv("PRJ_SHARED_PATH"),
-    Sys.getenv("INPUT_DATA_FOLDER")
-  )
+    Sys.getenv("INPUT_DATA_FOLDER"),
+    x
+  ) |>
+    normalizePath()
 }
 
-get_output_data_path <- function() {
+get_output_data_path <- function(x) {
   file.path(
     Sys.getenv("PRJ_SHARED_PATH"),
-    Sys.getenv("OUTPUT_DATA_FOLDER")
-  )
+    Sys.getenv("OUTPUT_DATA_FOLDER"),
+    x
+  ) |>
+    normalizePath()
 }
 
 
 share_objects <- function(obj_list) {
   file_name <- paste0(names(obj_list), ".rds")
 
-  obj_paths <- file.path(get_output_data_path, file_name) |>
+  obj_paths <- file.path(get_output_data_path(file_name)) |>
     normalizePath(mustWork = FALSE) |>
     purrr::set_names(names(obj_list))
 
