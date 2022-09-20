@@ -40,7 +40,7 @@ if (Sys.getenv("PRJ_SHARED_PATH") == "") {
   Sys.setenv(PRJ_SHARED_PATH = normalizePath(here::here()))
   usethis::ui_todo(paste0(
     "Default path is set to the current project folder; ",
-    "i.e., the {usethis::ui_value(`_targets/`)} folder is not shared."
+    "i.e., the {usethis::ui_value('_targets/')} folder is not shared."
   ))
 }
 
