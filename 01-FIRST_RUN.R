@@ -50,13 +50,11 @@ renv::snapshot()
 
 
 ## At your convenience, replace your readme file
-{
-  usethis::use_readme_rmd()
-  usethis::use_lifecycle_badge("experimental")
-  usethis::use_github_actions_badge("check-release")
-  usethis::use_github_actions_badge("test-coverage")
-  usethis::use_github_actions_badge("lint")
-}
+usethis::use_readme_rmd()
+usethis::use_lifecycle_badge("experimental")
+usethis::use_github_actions_badge("check-release")
+usethis::use_github_actions_badge("test-coverage")
+usethis::use_github_actions_badge("lint")
 
 # put your email here, i.e. usethis::use_code_of_conduct("me@org.com")
 usethis::use_code_of_conduct()
