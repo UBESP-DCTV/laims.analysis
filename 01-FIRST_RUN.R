@@ -79,7 +79,7 @@ devtools::build_readme()
   rstudioapi::navigateToFile(here::here("dev/03-run_cycle.R"))
   rstudioapi::navigateToFile(here::here("_targets.R"))
   usethis::ui_todo(
-    "Use {usethis::ui_value('_targets.R')} to devine your pipelines."
+    "Use {usethis::ui_value('_targets.R')} to define your pipelines."
   )
 
   rstudioapi::navigateToFile(
