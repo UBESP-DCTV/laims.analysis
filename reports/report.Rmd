@@ -113,7 +113,7 @@ tar_load(relevantResult)
 ```
 
 
-Relevant results are: `r relevanResult`.
+Relevant results are: `r relevantResult`.
 
 
 
