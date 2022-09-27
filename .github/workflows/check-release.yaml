@@ -21,8 +21,8 @@ jobs:
         with:
           use-public-rspm: true
 
-      - name: Lint
-        run: sudo apt -y install gfortran-7 libmkl-rt
+      - name: igraph-dependencies
+        run: sudo apt -y install gfortran-7 libmkl-rt libglpk-dev
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
