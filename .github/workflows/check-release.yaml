@@ -21,6 +21,9 @@ jobs:
         with:
           use-public-rspm: true
 
+      - name: Lint
+        run: sudo apt -y install gfortran-7 libmkl-rt
+
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: rcmdcheck
