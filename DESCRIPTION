@@ -12,14 +12,12 @@ Imports:
     readr,
     stringr
 Suggests: 
-    autotestthat (>= 0.1.1),
     blogdown,
     checkmate,
     covr,
     depigner,
     devtools,
     distill,
-    emo (>= 0.0.0.9000),
     gitcreds,
     here,
     htmltools,
@@ -29,16 +27,17 @@ Suggests:
     lintr,
     magick,
     markdown,
-    metathis (>= 1.1.1),
+    metathis,
     mice,
     miniUI,
     naniar,
     qs,
     rms,
+    rstudioapi,
     shiny,
     spelling,
-    tarchetypes (>= 0.4.1),
-    targets (>= 0.10.0.9000),
+    tarchetypes,
+    targets,
     testthat (>= 3.0.0),
     unheadr,
     usethis,
@@ -46,11 +45,9 @@ Suggests:
     webshot,
     withr,
     xaringan,
-    xaringanExtra (>= 0.5.5),
-    xaringanthemer (>= 0.4.1)
-Remotes: 
-    CorradoLanera/autotestthat,
-    hadley/emo
+    xaringanExtra,
+    xaringanthemer,
+    yaml
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
