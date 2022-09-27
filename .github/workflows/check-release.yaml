@@ -22,7 +22,7 @@ jobs:
           use-public-rspm: true
 
       - name: igraph-dependencies
-        run: sudo apt -y install gfortran-7 libmkl-rt libglpk-dev
+        run: sudo apt-get -y install libglpk-dev
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
