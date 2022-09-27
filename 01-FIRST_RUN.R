@@ -24,7 +24,11 @@ here::here() |>
       stringr::str_replace_all("laims\\.analysis", prj_name) |>
       writeLines(.x)
   })
-
+if (usethis::ui_yeah(
+  "Restart RStudio now? (Required after updating project/files names.)"
+)) {
+  rstudioapi::openProject(paste0(prj_name, ".Rproj"))
+}
 
 
 ## - [ ] Fill the DESCRIPTION file
