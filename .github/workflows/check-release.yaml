@@ -21,6 +21,9 @@ jobs:
         with:
           use-public-rspm: true
 
+      - name: igraph-dependencies
+        run: sudo apt-get -y install libglpk-dev
+
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: rcmdcheck

@@ -35,7 +35,6 @@ list(
 
 
   # Call your custom functions as needed.
-  tar_target(irrelevantResult, null(1), format = "qs"),
   tar_target(relevantResult, relevant_computation(db), format = "qs"),
 
   # compile yor report

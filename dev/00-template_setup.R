@@ -7,15 +7,12 @@ dev_pkgs <- c(
   "blogdown", "checkmate", "covr", "devtools", "depigner", "distill",
   "fs", "gitcreds", "here", "htmltools", "igraph", "janitor", "knitr",
   "lintr", "magick", "markdown", "metathis", "mice", "miniUI", "naniar",
-  "purrr", "qs", "rms", "shiny", "spelling","stringr", "targets",
-  "tarchetypes", "testthat", "unheadr", "usethis", "visNetwork",
-  "webshot", "withr", "xaringan", "xaringanExtra", "xaringanthemer"
+  "purrr", "qs", "rms", "rstudioapi", "shiny", "spelling","stringr",
+  "targets", "tarchetypes", "testthat", "unheadr", "usethis",
+  "visNetwork", "webshot", "withr", "xaringan", "xaringanExtra",
+  "xaringanthemer", "yaml"
 )
-gh_dev_pkgs <- c(
-  "hadley/emo",
-  "CorradoLanera/autotestthat"
-)
-renv::install(c(dev_pkgs, gh_dev_pkgs))
+renv::install(dev_pkgs)
 
 
 usethis::use_description(check_name = FALSE)
@@ -23,10 +20,6 @@ usethis::use_proprietary_license("UBEP")
 
 
 purrr::walk(dev_pkgs, usethis::use_package, type = "Suggests")
-purrr::walk(gh_dev_pkgs, ~{
-  package_name <- stringr::str_extract(.x, "[\\w\\.]+$")
-  usethis::use_dev_package(package_name, type = "Suggests", remote = .x)
-})
 usethis::use_tidy_description()
 
 

@@ -1,5 +1,5 @@
 source("renv/activate.R")
-
+if (!interactive()) renv::restore()
 
 options(
   tidyverse.quiet = TRUE
@@ -22,6 +22,22 @@ if (interactive()) {
   }))
 }
 
+if (
+  interactive() &&
+  requireNamespace("rstudioapi") &&
+  fs::file_exists("01-FIRST_RUN.R")
+) {
+  # https://github.com/rstudio/rstudioapi/issues/100
+  setHook(
+    "rstudio.sessionInit",
+    function(newSession) {
+      if (newSession) {
+        rstudioapi::navigateToFile("01-FIRST_RUN.R")
+      }
+    },
+    action = "append"
+  )
+}
 
 if (Sys.getenv("PRJ_SHARED_PATH") == "") {
 
