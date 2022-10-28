@@ -60,6 +60,9 @@ if (Sys.getenv("PRJ_SHARED_PATH") == "") {
   ))
 }
 
+Sys.setenv(
+  "PRJ_SHARED_PATH" = path.expand(Sys.getenv("PRJ_SHARED_PATH"))
+)
 
 if (!(fs::is_dir(Sys.getenv("PRJ_SHARED_PATH")))) {
   usethis::ui_stop(paste0(
@@ -75,7 +78,10 @@ if (!(fs::is_dir(Sys.getenv("PRJ_SHARED_PATH")))) {
   ))
 }
 
-.get_prj_shared_path <- function() Sys.getenv('PRJ_SHARED_PATH')
+.get_prj_shared_path <- function() {
+  Sys.getenv('PRJ_SHARED_PATH') |>
+    normalizePath(winslash = "/", mustWork = FALSE)
+}
 
 targets::tar_config_set(
   store = file.path(.get_prj_shared_path(), "_targets")
