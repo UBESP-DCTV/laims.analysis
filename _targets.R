@@ -15,8 +15,8 @@ list.files(here::here("R"), pattern = "\\.R$", full.names = TRUE) |>
 
 # Set target-specific options such as packages.
 tar_option_set(
-  packages = c("readr"),
-  error = "continue"
+  error = "continue",
+  workspace_on_error = TRUE
 )
 
 # End this file with a list of target objects.
