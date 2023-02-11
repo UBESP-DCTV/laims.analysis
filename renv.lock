@@ -175,25 +175,6 @@
         "vctrs"
       ]
     },
-    "blogdown": {
-      "Package": "blogdown",
-      "Version": "1.13",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "e8d061caad7a9f3fe57533b4d4db57f9",
-      "Requirements": [
-        "bookdown",
-        "htmltools",
-        "httpuv",
-        "jsonlite",
-        "knitr",
-        "later",
-        "rmarkdown",
-        "servr",
-        "xfun",
-        "yaml"
-      ]
-    },
     "bookdown": {
       "Package": "bookdown",
       "Version": "0.29",
@@ -1781,19 +1762,6 @@
       "Requirements": [
         "R6",
         "stringr"
-      ]
-    },
-    "servr": {
-      "Package": "servr",
-      "Version": "0.24",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "e2c3e268d654becf0d78a1ec13a05b46",
-      "Requirements": [
-        "httpuv",
-        "jsonlite",
-        "mime",
-        "xfun"
       ]
     },
     "sessioninfo": {

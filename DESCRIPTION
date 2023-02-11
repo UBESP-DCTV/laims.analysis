@@ -12,7 +12,6 @@ Imports:
     readr,
     stringr
 Suggests: 
-    blogdown,
     checkmate,
     covr,
     devtools,
@@ -22,7 +21,6 @@ Suggests:
     igraph,
     knitr,
     lintr,
-    markdown,
     qs,
     rstudioapi,
     spelling,
@@ -31,8 +29,7 @@ Suggests:
     testthat (>= 3.0.0),
     usethis,
     visNetwork,
-    withr,
-    yaml
+    withr
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
