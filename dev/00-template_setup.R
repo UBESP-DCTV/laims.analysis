@@ -5,11 +5,11 @@ stop("00-setup.R is not intended to be re-run/sourced.", call. = FALSE)
 
 dev_pkgs <- c(
   "blogdown", "checkmate", "covr", "devtools", "distill",
-  "fs", "gitcreds", "here", "htmltools", "igraph", "knitr",
-  "lintr", "magick", "markdown", "metathis", "miniUI",
-  "purrr", "qs", "rstudioapi", "shiny", "spelling","stringr",
+  "fs", "here", "htmltools", "igraph", "knitr",
+  "lintr", "markdown", "metathis",
+  "purrr", "qs", "rstudioapi", "spelling","stringr",
   "targets", "tarchetypes", "testthat", "usethis",
-  "visNetwork", "webshot", "withr", "yaml"
+  "visNetwork", "withr", "yaml"
 )
 renv::install(dev_pkgs)
 
