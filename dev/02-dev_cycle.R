@@ -3,7 +3,7 @@
 
 prj_pkgs <- c("fs", "readr", "stringr", "purrr")
 gh_prj_pkgs <- c()
-meta_pkgs <- c("tidymodels", "tidyverse")
+meta_pkgs <- c("tidyverse")
 
 renv::install(c(prj_pkgs, gh_prj_pkgs, meta_pkgs))
 
