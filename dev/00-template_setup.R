@@ -76,6 +76,7 @@ renv::snapshot()
 
 # CI/CD -----------------------------------------------------------
 
+usethis::use_github_action_check_standard()
 usethis::use_github_action("check-release")
 usethis::use_github_actions_badge("check-release")
 usethis::use_github_action("test-coverage")

@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/UBESP-DCTV/laims.analysis/branch/master/graph/badge.svg)](https://app.codecov.io/gh/UBESP-DCTV/laims.analysis?branch=master)
 [![R-CMD-check](https://github.com/UBESP-DCTV/laims.analysis/actions/workflows/check-release.yaml/badge.svg)](https://github.com/UBESP-DCTV/laims.analysis/actions/workflows/check-release.yaml)
 [![lint](https://github.com/UBESP-DCTV/laims.analysis/workflows/lint/badge.svg)](https://github.com/UBESP-DCTV/laims.analysis/actions)
+[![R-CMD-check](https://github.com/UBESP-DCTV/laims.analysis/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBESP-DCTV/laims.analysis/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 
