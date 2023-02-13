@@ -1,5 +1,5 @@
 source("renv/activate.R")
-if (!interactive()) renv::restore()
+# if (!interactive()) renv::restore()
 
 options(
   tidyverse.quiet = TRUE
