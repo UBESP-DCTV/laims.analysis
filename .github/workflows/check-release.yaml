@@ -2,9 +2,9 @@
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
   push:
-    branches: []
+    branches: [develop]
   pull_request:
-    branches: []
+    branches: [develop]
 
 name: Develop_R-CMD-check
 
@@ -13,9 +13,24 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      NOT_CRAN: true
+      TAR_NOT_CRAN: true
       R_KEEP_PKG_SOURCE: yes
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: false
+      TORCH_INSTALL: 1
+
     steps:
       - uses: actions/checkout@v3
+
+      - name: Install Mac system dependencies
+        if: runner.os == 'macOS'
+        run: brew install zeromq
+
+      - name: Install Linux system dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install libglpk-dev libglpk40
 
       - uses: r-lib/actions/setup-r@v2
         with:
@@ -24,7 +39,5 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: rcmdcheck
-
-      # - uses: r-lib/actions/setup-renv@v2
 
       - uses: r-lib/actions/check-r-package@v2
