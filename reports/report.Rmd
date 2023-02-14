@@ -89,7 +89,7 @@ targets::tar_visnetwork(
     "report", "objectToShare", "shareOutput", starts_with("."),
     all_of(extract_fct_names(here::here("R/utils.R")))
   )
-)
+)  
 ```
 
 
