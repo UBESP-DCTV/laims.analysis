@@ -1,17 +1,26 @@
 
 # Project packages (TO BE UPDATED EVERY NEW PACKAGE USED) ----------
+meta_pkgs <- c()  # e.g., tidyverse, tidymodels, ...
+renv::install(meta_pkgs)
 
 prj_pkgs <- c("fs", "readr", "stringr", "purrr")
-gh_prj_pkgs <- c()
-meta_pkgs <- c("tidymodels", "tidyverse")
-
-renv::install(c(prj_pkgs, gh_prj_pkgs, meta_pkgs))
-
+renv::install(prj_pkgs)
 purrr::walk(prj_pkgs, usethis::use_package)
+
+gh_prj_pkgs <- c()  # e.g. CorradoLanera/autotestthat
+renv::install(gh_prj_pkgs)
 purrr::walk(gh_prj_pkgs, ~{
   package_name <- stringr::str_extract(.x, "[\\w\\.]+$")
   usethis::use_dev_package(package_name, remote = .x)
 })
+
+dev_pkgs <- c(
+  "checkmate", "covr", "devtools", "distill", "fs", "here", "htmltools",
+  "knitr", "lintr", "purrr", "qs", "rstudioapi", "spelling",
+  "stringr", "targets", "tarchetypes", "testthat", "usethis", "withr"
+)
+renv::install(dev_pkgs)
+purrr::walk(dev_pkgs, usethis::use_package, type = "Suggests")
 
 usethis::use_tidy_description()
 devtools::document()

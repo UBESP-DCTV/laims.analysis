@@ -37,7 +37,7 @@ get_output_data_path <- function(x) {
     Sys.getenv("OUTPUT_DATA_FOLDER"),
     x
   ) |>
-    normalizePath()
+    normalizePath(mustWork = FALSE)
 }
 
 

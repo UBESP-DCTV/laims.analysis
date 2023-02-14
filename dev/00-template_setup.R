@@ -4,13 +4,10 @@ stop("00-setup.R is not intended to be re-run/sourced.", call. = FALSE)
 # Development packages ---------------------------------------------
 
 dev_pkgs <- c(
-  "blogdown", "checkmate", "covr", "devtools", "depigner", "distill",
-  "fs", "gitcreds", "here", "htmltools", "igraph", "janitor", "knitr",
-  "lintr", "magick", "markdown", "metathis", "mice", "miniUI", "naniar",
-  "purrr", "qs", "rms", "rstudioapi", "shiny", "spelling","stringr",
-  "targets", "tarchetypes", "testthat", "unheadr", "usethis",
-  "visNetwork", "webshot", "withr", "xaringan", "xaringanExtra",
-  "xaringanthemer", "yaml"
+  "checkmate", "covr", "devtools", "distill", "fs", "here", "htmltools",
+  "knitr", "lintr", "purrr", "qs", "rstudioapi", "spelling",
+  "stringr", "targets", "tarchetypes", "testthat", "usethis",
+  "withr"
 )
 renv::install(dev_pkgs)
 
@@ -79,6 +76,7 @@ renv::snapshot()
 
 # CI/CD -----------------------------------------------------------
 
+usethis::use_github_action_check_standard()
 usethis::use_github_action("check-release")
 usethis::use_github_actions_badge("check-release")
 usethis::use_github_action("test-coverage")

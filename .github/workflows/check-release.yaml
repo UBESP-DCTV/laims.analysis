@@ -2,18 +2,23 @@
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
   push:
-    branches: [main, master, develop]
+    branches: [develop]
   pull_request:
-    branches: [main, master, develop]
+    branches: [develop]
 
-name: R-CMD-check
+name: Develop_R-CMD-check
 
 jobs:
   R-CMD-check:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      NOT_CRAN: true
+      TAR_NOT_CRAN: true
       R_KEEP_PKG_SOURCE: yes
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: false
+      TORCH_INSTALL: 1
+
     steps:
       - uses: actions/checkout@v3
 
@@ -21,11 +26,9 @@ jobs:
         with:
           use-public-rspm: true
 
-      - name: igraph-dependencies
-        run: sudo apt-get -y install libglpk-dev
-
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: rcmdcheck
+          extra-packages: any::rcmdcheck
+          needs: check
 
       - uses: r-lib/actions/check-r-package@v2

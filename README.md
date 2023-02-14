@@ -39,24 +39,22 @@ of the project.
 
 ## Functionalities
 
--   A dedicated packages’ **project-level library** powered by `{renv}`
--   All the **documentation** for functions and the project itself
-    powered by `{roxygen2}`
--   A **test-driven environment** powered by `{testthat}`,
-    `{checkmate}`, and `{covr}` including an addin for continuous
-    monitoring of codes and tests changes, automatically triggering
-    tests as needed, powered by `{CorradoLanera/autotestthat}`.
--   Systems for grammar and static code checking powered by `{spelling}`
-    and `{lintr}`, respectively
--   Continuous Integration and Development is activated and powered by
-    GitHub actions, automating linters and checks execution, and
-    coverage assessment.
--   A full environment enforcing reproducibility by the execution,
-    caching and invalidation of a structured project’s pipeline powered
-    by `{targets}` and `{tarchetypes}` in conjunction and synergy with
-    Rmarkdown scientifically flavored documents powered by `{distill}`
-    (with options for connections with Zotero as citation manager,
-    linked with local or remote libraries)
+- A dedicated packages’ **project-level library** powered by `{renv}`
+- All the **documentation** for functions and the project itself powered
+  by `{roxygen2}`
+- A **test-driven environment** powered by `{testthat}`, `{checkmate}`,
+  and `{covr}`.
+- Systems for grammar and static code checking powered by `{spelling}`
+  and `{lintr}`, respectively
+- Continuous Integration and Development is activated and powered by
+  GitHub actions, automating linters and checks execution, and coverage
+  assessment.
+- A full environment enforcing reproducibility by the execution, caching
+  and invalidation of a structured project’s pipeline powered by
+  `{targets}` and `{tarchetypes}` in conjunction and synergy with
+  Rmarkdown scientifically flavored documents powered by `{distill}`
+  (with options for connections with Zotero as citation manager, linked
+  with local or remote libraries)
 
 ## Code of Conduct
 

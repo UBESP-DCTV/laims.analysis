@@ -30,6 +30,10 @@ import_data <- function(.data_path) {
 }
 
 
+preprocess <- function(db) {
+  db
+}
+
 relevant_computation <- function(db) {
   2 * length(db) + 1
 }
