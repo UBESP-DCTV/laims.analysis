@@ -1,7 +1,7 @@
 
 # FIRST RUN ONLY ---------------------------------------------------
 
-## - [ ] Change the name of `laims.analyses.Rproj` using your main
+## - [ ] This changes the name of `laims.analyses.Rproj` using your main
 ##       project's directory name accordingly. To do that,
 ##       simply run the following code
 prj_name <- basename(here::here())
