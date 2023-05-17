@@ -20,7 +20,7 @@
       all.files = TRUE
     ) |>
     setdiff(c("01-FIRST_RUN.R")) |>
-    c(".Renviron") |>
+    c("DESCRIPTION", ".Renviron") |>
     purrr::walk(~{
       readLines(.x) |>
         stringr::str_replace_all("laims\\.analysis", prj_name) |>
