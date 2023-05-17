@@ -5,6 +5,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
+^output$
 ^00-setup\.R$
 ^01-dev_cycle\.R$
 ^\.lintr$
