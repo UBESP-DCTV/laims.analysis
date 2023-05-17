@@ -1,9 +1,6 @@
 source("renv/activate.R")
-# if (!interactive()) renv::restore()
 
-options(
-  tidyverse.quiet = TRUE
-)
+options(tidyverse.quiet = TRUE)
 
 stopifnot(
   `env var "PROJ_TITLE" must be set` = Sys.getenv("PROJ_TITLE") != "",
@@ -12,13 +9,19 @@ stopifnot(
   `env var "PROJ_URL" must be set` = Sys.getenv("PROJ_URL") != ""
 )
 
-if (interactive()) {
+if (interactive() && as.logical(Sys.getenv("ATTACH_STARTUP_PKGS"))) {
+  usethis::ui_todo("Attaching development supporting packages...")
   suppressPackageStartupMessages(suppressWarnings({
-    library(devtools)
     library(usethis)
+    ui_done("Library {ui_value('usethis')} attached.")
     library(checkmate)
-    library(testthat)
+    ui_done("Library {ui_value('checkmate')} attached.")
+    library(devtools)
+    ui_done("Library {ui_value('devtools')} attached.")
     library(targets)
+    ui_done("Library {ui_value('targets')} attached.")
+    library(testthat)
+    ui_done("Library {ui_value('testthat')} attached.")
   }))
 
   if (
@@ -45,7 +48,7 @@ if (interactive()) {
     ))
 
     usethis::ui_info(paste0(
-      "If you like, you can set it to a shared path for the project.\n",
+      "You can set it to a shared path for the project.\n",
       "You can set it in the {usethis::ui_value('.Renviron')} file.\n",
       "Open {usethis::ui_value('.Renviron')} by ",
       "{usethis::ui_code('usethis::edit_r_environ(\"project\")')}."

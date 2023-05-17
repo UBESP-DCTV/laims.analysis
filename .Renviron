@@ -1,5 +1,8 @@
 PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
 
+# Attach supporting packages
+ATTACH_STARTUP_PKGS=TRUE
+
 # Project's information: ONE SINGLE LINE EACH (no line brakes!!)
 PROJ_TITLE="Project's Title"
 PROJ_DESCRIPTION="Project's description."
