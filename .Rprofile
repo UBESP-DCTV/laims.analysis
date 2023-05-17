@@ -9,20 +9,22 @@ stopifnot(
   `env var "PROJ_URL" must be set` = Sys.getenv("PROJ_URL") != ""
 )
 
-if (interactive() && as.logical(Sys.getenv("ATTACH_STARTUP_PKGS"))) {
-  usethis::ui_todo("Attaching development supporting packages...")
-  suppressPackageStartupMessages(suppressWarnings({
-    library(usethis)
-    ui_done("Library {ui_value('usethis')} attached.")
-    library(checkmate)
-    ui_done("Library {ui_value('checkmate')} attached.")
-    library(devtools)
-    ui_done("Library {ui_value('devtools')} attached.")
-    library(targets)
-    ui_done("Library {ui_value('targets')} attached.")
-    library(testthat)
-    ui_done("Library {ui_value('testthat')} attached.")
-  }))
+if (interactive()) {
+  if (as.logical(Sys.getenv("ATTACH_STARTUP_PKGS"))) {
+    usethis::ui_todo("Attaching development supporting packages...")
+    suppressPackageStartupMessages(suppressWarnings({
+      library(usethis)
+      ui_done("Library {ui_value('usethis')} attached.")
+      library(checkmate)
+      ui_done("Library {ui_value('checkmate')} attached.")
+      library(devtools)
+      ui_done("Library {ui_value('devtools')} attached.")
+      library(targets)
+      ui_done("Library {ui_value('targets')} attached.")
+      library(testthat)
+      ui_done("Library {ui_value('testthat')} attached.")
+    }))
+  }
 
   if (
     requireNamespace("rstudioapi") &&
@@ -40,6 +42,7 @@ if (interactive() && as.logical(Sys.getenv("ATTACH_STARTUP_PKGS"))) {
     )
   }
 
+
   if (Sys.getenv("PRJ_SHARED_PATH") == "") {
 
     usethis::ui_info(paste0(
@@ -55,10 +58,22 @@ if (interactive() && as.logical(Sys.getenv("ATTACH_STARTUP_PKGS"))) {
     ))
 
     Sys.setenv(PRJ_SHARED_PATH = normalizePath(here::here()))
+    readLines(here::here(".Renviron")) |>
+      stringr::str_replace(
+        'PRJ_SHARED_PATH=""',
+        paste0(
+          'PRJ_SHARED_PATH="',
+          normalizePath(here::here()) |>
+            stringr::str_replace_all("\\\\", "\\\\\\\\"),
+          '"'
+        )
+      ) |>
+      writeLines(here::here(".Renviron"))
     usethis::ui_todo(paste0(
       "Default path is set to the current project folder; ",
       "i.e., the {usethis::ui_value('_targets/')} folder is not shared."
     ))
+    usethis::ui_info("This message is shown this time only.")
   }
 
   Sys.setenv(
