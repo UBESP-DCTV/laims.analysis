@@ -6,6 +6,12 @@
 ## run the following code (after having renamed your project's folder
 ## at your convenience)
 {
+  if (!requireNamespace("renv", quietly = TRUE)) {
+    stop(
+      "Before to run this all, please `install.packages('renv')`."
+    )
+  }
+  renv::restore(prompt = FALSE)
   prj_name <- basename(here::here())
   fs::file_move(
     here::here("laims.analysis.Rproj"),  # old project's name
