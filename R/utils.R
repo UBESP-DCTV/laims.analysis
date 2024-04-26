@@ -1,6 +1,6 @@
 
 # Here below put your small tiny supporting functions -------------
-
+`%||%` <- function(x, y) if (is.null(x)) y else x
 
 view_in_excel <- function(.data) {
   if (interactive()) {
