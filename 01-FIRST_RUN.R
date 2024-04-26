@@ -6,6 +6,13 @@
 ## run the following code (after having renamed your project's folder
 ## at your convenience)
 {
+  if (!requireNamespace("renv", quietly = TRUE)) {
+    stop(
+      "Before to run this all, please `install.packages('renv')`."
+    )
+  }
+  renv::restore(prompt = FALSE)
+  rstudioapi::restartSession()
   prj_name <- basename(here::here())
   fs::file_move(
     here::here("laims.analysis.Rproj"),  # old project's name
@@ -45,10 +52,11 @@ usethis::edit_r_environ("project")
 
 ## [Optional] Finaly, update all your packages in the project's library.
 renv::upgrade()
+rstudioapi::restartSession()
 renv::update()
 renv::status()
 renv::snapshot()
-
+rstudioapi::restartSession()
 
 ## At your convenience, replace your readme file
 usethis::use_readme_rmd()

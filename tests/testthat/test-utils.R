@@ -17,3 +17,17 @@ test_that("extract_fct_names works", {
   # expectation
   expect_equal(res, c("a", "c", "d", "%||%"))
 })
+
+test_that("`%||%` works", {
+  # setup
+  something <- 1
+  nothing <- NULL
+
+  # execution
+  res_ok <- something %||% 2
+  res_ko <- nothing %||% 2
+
+  # expectation
+  expect_equal(res_ok, 1)
+  expect_equal(res_ko, 2)
+})
