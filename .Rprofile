@@ -114,4 +114,10 @@ if (interactive()) {
     store = file.path(.get_prj_shared_path(), "_targets"),
     config = "reports/_targets.yaml"
   )
+
+  .run <- function() {
+    source(here::here("dev/run.R")) # check and make pipeline.
+  }
+  ui_info("Exexute {ui_code('.run()')} to make the pipeline.")
+
 }
