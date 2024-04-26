@@ -22,7 +22,7 @@ extract_fct_names <- function(path) {
 
 
 
-get_input_data_path <- function(x) {
+get_input_data_path <- function(x = "") {
   file.path(
     Sys.getenv("PRJ_SHARED_PATH"),
     Sys.getenv("INPUT_DATA_FOLDER"),
@@ -31,7 +31,7 @@ get_input_data_path <- function(x) {
     normalizePath()
 }
 
-get_output_data_path <- function(x) {
+get_output_data_path <- function(x = "") {
   file.path(
     Sys.getenv("PRJ_SHARED_PATH"),
     Sys.getenv("OUTPUT_DATA_FOLDER"),
@@ -42,13 +42,31 @@ get_output_data_path <- function(x) {
 
 
 share_objects <- function(obj_list) {
-  file_name <- paste0(names(obj_list), ".rds")
+  now <- lubridate::now() |>
+    stringr::str_remove_all("\\W+") |>
+    stringr::str_sub(1, 12)
 
-  obj_paths <- file.path(get_output_data_path(file_name)) |>
+  file_name_now <- stringr::str_c(
+    names(obj_list), "-", now, ".rds"
+  )
+
+  file_name_latest <- stringr::str_c(
+    names(obj_list), "-", "latest", ".rds"
+  )
+
+  obj_paths_now <- get_output_data_path(file_name_now) |>
+    normalizePath(mustWork = FALSE) |>
+    purrr::set_names(names(obj_list))
+
+  obj_paths_latest <- get_output_data_path(file_name_latest) |>
     normalizePath(mustWork = FALSE) |>
     purrr::set_names(names(obj_list))
 
   # Those must be RDS
-  purrr::walk2(obj_list, obj_paths, readr::write_rds)
-  obj_paths
+  obj_list |>
+    purrr::walk2(obj_paths_now, readr::write_rds)
+  obj_list |>
+    purrr::walk2(obj_paths_latest, readr::write_rds)
+
+  obj_paths_latest
 }
