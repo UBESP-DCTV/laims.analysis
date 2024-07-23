@@ -6,4 +6,5 @@ lintr::lint_package()
 ## CTRL + SHIFT + T: run all project's tests
 ## CTRL + SHIFT + E: run all CRAN tests
 
-source(here::here("dev/run.R")) # check and make `_targets.R` pipeline.
+.run() # check and make `_targets.R` pipeline.
+## .background_run() # run the pipeline in the background.

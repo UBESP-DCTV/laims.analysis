@@ -4,8 +4,8 @@ stop("00-setup.R is not intended to be re-run/sourced.", call. = FALSE)
 # Development packages ---------------------------------------------
 
 dev_pkgs <- c(
-  "checkmate", "covr", "crew", "devtools", "distill", "fs", "here",
-  "htmltools", "knitr", "lintr", "purrr", "qs", "rstudioapi",
+  "checkmate", "covr", "crew", "devtools", "distill", "dplyr", "fs",
+  "here", "htmltools", "knitr", "lintr", "purrr", "qs", "rstudioapi",
   "spelling", "stringr", "targets", "tarchetypes", "testthat",
   "usethis", "withr"
 )

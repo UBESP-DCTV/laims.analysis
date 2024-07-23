@@ -12,7 +12,6 @@
     )
   }
   renv::restore(prompt = FALSE)
-  rstudioapi::restartSession()
   prj_name <- basename(here::here())
   fs::file_move(
     here::here("laims.analysis.Rproj"),  # old project's name

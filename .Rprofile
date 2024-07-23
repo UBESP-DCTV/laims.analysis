@@ -115,9 +115,21 @@ if (interactive()) {
     config = "reports/_targets.yaml"
   )
 
-  .run <- function() {
+  .run <- function(...) {
     source(here::here("dev/run.R")) # check and make pipeline.
+    .run(...)
   }
   ui_info("Exexute {ui_code('.run()')} to make the pipeline.")
 
+  .background_run <- function(...) {
+    stopifnot(requireNamespace("rstudioapi"))
+    rstudioapi::jobRunScript(
+      here::here("dev/background_run.R"),
+      workingDir = here::here()
+    )
+  }
+  ui_info(paste0(
+    "Exexute {ui_code('.background_run()')} to make the pipeline ",
+    "as a background job in RStudio."
+  ))
 }
