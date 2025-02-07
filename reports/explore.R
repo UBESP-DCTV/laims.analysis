@@ -7,8 +7,7 @@ library(targets)
 library(here)
 
 # load all your custom functions
-list.files(here("R"), pattern = "\\.R$", full.names = TRUE) |>
-  lapply(source) |> invisible()
+tar_source()
 
 
 # Code here below -------------------------------------------------

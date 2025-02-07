@@ -1,6 +1,7 @@
 library(targets)
 library(tarchetypes)
 library(crew)  # parallel computing
+
 controller <- crew::crew_controller_local(
   name = "anvur_controller",
   workers = 1
@@ -9,7 +10,7 @@ controller <- crew::crew_controller_local(
 # Set target-specific options such as packages.
 tar_option_set(
   # error handling
-  error = "continue", # "null" create target with non-errored branches
+  error = "abridge", # "continue" (do other), "null" (NULL if error)
   workspace_on_error = TRUE,
   # fast data formats
   format = "qs",
@@ -22,8 +23,7 @@ tar_option_set(
 # Define custom functions and other global objects.
 # This is where you write source(\"R/functions.R\")
 # if you keep your functions in external scripts.
-list.files(here::here("R"), pattern = "\\.R$", full.names = TRUE) |>
-  lapply(source) |> invisible()
+tar_source()
 
 
 # End this file with a list of target objects.
