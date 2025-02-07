@@ -22,8 +22,7 @@ tar_option_set(
 # Define custom functions and other global objects.
 # This is where you write source(\"R/functions.R\")
 # if you keep your functions in external scripts.
-list.files(here::here("R"), pattern = "\\.R$", full.names = TRUE) |>
-  lapply(source) |> invisible()
+tar_source()
 
 
 # End this file with a list of target objects.
