@@ -24,11 +24,12 @@ Suggests:
     lintr,
     lubridate,
     qs,
+    qs2,
     rstudioapi,
     spelling,
     tarchetypes,
     targets,
-    testthat (>= 3.0.0),
+    testthat,
     usethis,
     withr
 Config/testthat/edition: 3

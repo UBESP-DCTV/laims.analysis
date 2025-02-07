@@ -16,7 +16,7 @@ purrr::walk(gh_prj_pkgs, ~{
 
 dev_pkgs <- c(
   "checkmate", "covr", "devtools", "distill", "fs", "here", "htmltools",
-  "knitr", "lintr", "lubridate", "purrr", "qs", "rstudioapi",
+  "knitr", "lintr", "lubridate", "purrr", "qs", "qs2", "rstudioapi",
   "spelling", "stringr", "targets", "tarchetypes", "testthat",
   "usethis", "withr"
 )

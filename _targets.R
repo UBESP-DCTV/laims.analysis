@@ -1,6 +1,7 @@
 library(targets)
 library(tarchetypes)
 library(crew)  # parallel computing
+
 controller <- crew::crew_controller_local(
   name = "anvur_controller",
   workers = 1
@@ -9,7 +10,7 @@ controller <- crew::crew_controller_local(
 # Set target-specific options such as packages.
 tar_option_set(
   # error handling
-  error = "continue", # "null" create target with non-errored branches
+  error = "abridge", # "continue" (do other), "null" (NULL if error)
   workspace_on_error = TRUE,
   # fast data formats
   format = "qs",
