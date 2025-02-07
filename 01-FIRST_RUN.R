@@ -40,14 +40,13 @@
 
 }
 
-# After that you can produce the basic project's documentation running
-# the following code
-usethis::use_package_doc(open = FALSE)
-
-
 ## Fill the projects' environmental variables inside the project's
 ## `.Renviron` which can be opened running the following code.
 usethis::edit_r_environ("project")
+
+# After that you can produce the basic project's documentation running
+# the following code
+usethis::use_package_doc(open = FALSE)
 
 ## [Optional] Finaly, update all your packages in the project's library.
 renv::upgrade()
@@ -60,7 +59,8 @@ rstudioapi::restartSession()
 ## At your convenience, replace your readme file
 usethis::use_readme_rmd()
 usethis::use_lifecycle_badge("experimental")
-usethis::use_github_actions_badge("check-release")
+usethis::use_github_actions_badge("check-prod")
+usethis::use_github_actions_badge("check-dev")
 usethis::use_github_actions_badge("test-coverage")
 usethis::use_github_actions_badge("lint")
 
