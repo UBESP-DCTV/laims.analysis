@@ -1,0 +1,16 @@
+PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
+
+# Attach supporting packages
+ATTACH_STARTUP_PKGS=TRUE
+
+# Project's information: ONE SINGLE LINE EACH (no line brakes!!)
+PROJ_TITLE="Project's Title"
+PROJ_DESCRIPTION="Project's description."
+PROJ_URL="https://github.com/UBESP-DCTV/laims.analysis"
+
+# Shared folders local locations
+# PATH should be a proper path (C:\\...)
+PRJ_SHARED_PATH=""
+# FOLDER shoud be only the name on the folder (and not the full path to that folder)
+INPUT_DATA_FOLDER="data-raw"
+OUTPUT_DATA_FOLDER="output"

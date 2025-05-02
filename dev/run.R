@@ -8,7 +8,7 @@
     save_all = TRUE,
     seconds_meta_append = 1.5,
     seconds_reporter = 0.5,
-    force = FALSE
+    force = !check
 ) {
   if (interactive() || force) {
     reporter <- match.arg(reporter)

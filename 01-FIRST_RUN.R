@@ -50,9 +50,8 @@ usethis::use_package_doc(open = FALSE)
 
 ## [Optional] Finaly, update all your packages in the project's library.
 renv::upgrade()
-rstudioapi::restartSession()
 renv::update()
-renv::status()
+renv::install(exclude = "laims.analysis")
 renv::snapshot()
 rstudioapi::restartSession()
 
