@@ -10,6 +10,7 @@ dev_pkgs <- c(
   "testthat", "usethis", "withr"
 )
 renv::install(dev_pkgs)
+renv::settings$ignored.packages("laims.analysis")
 
 
 usethis::use_description(check_name = FALSE)
@@ -69,7 +70,7 @@ usethis::git_vaccinate()
 usethis::use_tidy_description()
 renv::upgrade()
 renv::update()
-renv::status()
+renv::install(exclude = "laims.analysis")
 renv::snapshot()
 
 
