@@ -1,13 +1,11 @@
 # reporter <- "verbose"
-# reporter <- "verbose_positives"
-reporter <- "summary"
+reporter <- "balanced"
 
 usethis::ui_info("Start: {tic <- lubridate::now()}")
 
 targets::tar_make(
   reporter = reporter,
-  seconds_meta_append = 1.5,
-  seconds_reporter = 0.5
+  seconds_meta_append = 1.5
 )
 
 usethis::ui_info("End: {toc <- lubridate::now()}")
