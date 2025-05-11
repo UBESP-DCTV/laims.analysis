@@ -5,7 +5,7 @@ stop("00-setup.R is not intended to be re-run/sourced.", call. = FALSE)
 
 dev_pkgs <- c(
   "checkmate", "covr", "crew", "devtools", "distill", "dplyr", "fs",
-  "here", "htmltools", "knitr", "lintr", "purrr", "qs", "qs2",
+  "here", "htmltools", "knitr", "lintr", "purrr", "qs", "qs2", "quarto",
   "rstudioapi", "spelling", "stringr", "targets", "tarchetypes",
   "testthat", "usethis", "withr"
 )

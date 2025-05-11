@@ -45,7 +45,7 @@ list(
   tar_target(relevantResult, relevant_computation(db)),
 
   # compile yor report
-  tar_render(report, here::here("reports/report.Rmd")),
+  tar_quarto(report, here::here("reports/report.qmd")),
 
 
   # Decide what to share with other, and do it in a standard RDS format
@@ -60,5 +60,8 @@ list(
     share_objects(objectToShare),
     format = "file",
     pattern = map(objectToShare)
-  )
+  ),
+
+
+  tar_target(JustDontCareLastComma, NULL)
 )

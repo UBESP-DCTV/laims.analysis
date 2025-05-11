@@ -1,47 +1,49 @@
 ---
 title: "`r Sys.getenv('PROJ_TITLE')`"
-subtitle: 0.0.0.9000
+subtitle: "0.0.0.9000"
 description: "`r Sys.getenv('PROJ_DESCRIPTION')`"
 author:
   - name: A. Uthor
-    orcid_id: "0000-0002-0520-7428"
     affiliation: Unit of Biostatistics, Epidemiology, and Public Health
-    affiliation_url: https://www.unipd-ubep.it/
+    affiliation-url: https://www.unipd-ubep.it/
+    orcid: "0000-0002-0520-7428"
   - name: Corrado Lanera
+    affiliation: Unit of Biostatistics, Epidemiology, and Public Health
+    affiliation-url: https://www.unipd-ubep.it/
     url: https://CorradoLanera.it
-    orcid_id: "0000-0002-0520-7428"
-    affiliation: Unit of Biostatistics, Epidemiology, and Public Health
-    affiliation_url: https://www.unipd-ubep.it/
+    orcid: "0000-0002-0520-7428"
   - name: Dario Gregori
-    orcid_id: "0000-0001-7906-0580"
     affiliation: Unit of Biostatistics, Epidemiology, and Public Health
-    affiliation_url: https://www.unipd-ubep.it/
-citation_url: "`r Sys.getenv('PROJ_URL')`"
+    affiliation-url: https://www.unipd-ubep.it/
+    orcid: "0000-0001-7906-0580"
 date: "`r Sys.Date()`"
 bibliography: biblio.bib
 preview: man/img/LAIMS.png
-self-contained: true
-output:
-  distill::distill_article:
+execute: 
+  echo: false
+format:
+  html:
     toc: true
-    toc_depth: 2
-    code_folding: true
+    toc-depth: 2
+    code-fold: true
+    code-summary: "Show the code"
+    code-tools: true
+    embed-resources: true
+    other-links:
+      - text: Project URL
+        href: "`r Sys.getenv('PROJ_URL')`"
 ---
 
 <!-- DON'T RENDER THE REPORT BY HAND DIRECTLY! -->
 <!-- use `targets::tar_make()` instead -->
 
+```{r}
+#| label: setup
+#| include: false
 
-```{r setup, include=FALSE}
 options(
   width = 90,
   tidyverse.quiet = TRUE
-)
-
-knitr::opts_chunk$set(
-  echo = FALSE,
-  collapse = TRUE,
-  comment = ""
 )
 
 library(glue)
@@ -52,17 +54,17 @@ library(tidyverse)
 tar_source()
 ```
 
-
-```{r, echo=FALSE}
+```{r}
 htmltools::img(
  src = knitr::image_uri(here("man", "img", "LAIMS.png")),
  alt = 'logo',
  style = 'position:absolute; top:0; right:0; padding:10px;'
- )
+)
 ```
 
-
-```{r packages, include=FALSE}
+```{r}
+#| label: packages
+#| include: false
 
 ```
 
@@ -74,10 +76,9 @@ This content will appear in the gutter of the article.
 
 ## Methods
 
-Footnotes use standard Pandoc markdown notation, for example ^[This will become a hover-able footnote]. The number of the footnote will be automatically generated.
+Footnotes use standard Pandoc markdown notation, for example^[This is a footnote]. The number of the footnote will be automatically generated.
 
 ## Analyses
-
 
 You can show your current state analyses' pipeline, e.g., by
 
@@ -88,47 +89,34 @@ targets::tar_visnetwork(
     "report", "objectToShare", "shareOutput", starts_with("."),
     all_of(extract_fct_names(here::here("R/utils.R")))
   )
-)  
+)
 ```
-
 
 ## Results
 
-
-You can get the results of your analyses by 
+You can get the results of your analyses by
 
 ```{r}
 str(tar_read(db), 1)
 ```
-
 
 ## Discussion
 
 You can also load and reuse objects
 
 ```{r}
-tar_load(irrelevantResult)
 tar_load(relevantResult)
 ```
 
-
 Relevant results are: `r relevantResult`.
-
-
 
 ## Acknowledgments {.appendix}
 
-This is a place to recognize people and institutions. It may also be a good place
-to acknowledge and cite software that makes your work possible.
+This is a place to recognize people and institutions. It may also be a good place to acknowledge and cite software that makes your work possible.
 
 ## Author Contributions {.appendix}
 
-We strongly encourage you to include an author contributions statement briefly 
-describing what each author did.
-
-
-
-
+We strongly encourage you to include an author contributions statement briefly describing what each author did.
 
 ## Environment {.appendix}
 
@@ -138,5 +126,3 @@ describing what each author did.
 devtools::session_info()
 ```
 </details>
-
-
